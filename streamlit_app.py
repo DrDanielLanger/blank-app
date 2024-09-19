@@ -25,8 +25,8 @@ st.sidebar.markdown(sidebar_content)
 with col1:
     st.header("IP to Compare")
     st.divider()
-    text="""Scanned/Converted PDFs of images, presentations, or spreadsheets are unsupported."""
-    st.markdown(text)
+    st.caption("NOTE: Scanned/Converted PDFs of images, presentations, or spreadsheets are unsupported.")
+    
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
         # To read file as bytes:
