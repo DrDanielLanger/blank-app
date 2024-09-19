@@ -1,8 +1,6 @@
-# 🎈 Blank app template
+# Gene.AI Challenge Frontpage
 
-A simple Streamlit app template for you to modify!
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+A simple frontend page to display the functionality of Gene.AI "AskOurDocs" to compare third-party documents with ThermoFisher IP.
 
 ### How to run it on your own machine
 
