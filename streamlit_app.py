@@ -4,7 +4,7 @@ import pandas as pd
 
 #st.title("🎈 My new app")
 
-LOGO_TEAM = "images/Challenge-picture2.png"
+LOGO_TEAM = "Challenge-picture2.png"
 #st.logo(LOGO_TEAM)
 st.logo(LOGO_TEAM, icon_image=LOGO_TEAM)
 
