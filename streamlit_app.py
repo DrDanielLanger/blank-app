@@ -4,13 +4,6 @@ import pandas as pd
 import time
 from io import StringIO
 
-
-#st.title("🎈 My new app")
-
-#LOGO_TEAM = "Challenge-picture2.png"
-#st.logo(LOGO_TEAM)
-#st.logo(LOGO_TEAM, icon_image=LOGO_TEAM)
-
 _COMPARE = """
 The result of the technical comparison of the uploaded file with current 
 ThermoFisher Scientific IP documents shows no inflictions so far.
@@ -19,19 +12,21 @@ ThermoFisher Scientific IP documents shows no inflictions so far.
 # begin: main page setup
 st.set_page_config(layout="wide")
 st.title("Gene.AI IP Checker")
-#st.image(LOGO_TEAM, width=150)
 
 col1, col2 = st.columns([1, 2])
 # end: main page setup
+
 # begin: left sidebar
 with open("sidebar.md") as sidebar_file:
     sidebar_content = sidebar_file.read()
 st.sidebar.image("Challenge-picture2.png", width=250)
 st.sidebar.markdown(sidebar_content)
+
 with col1:
     st.header("IP to Compare")
     st.divider()
-    #st.subheader ("Input Box")
+    text="""Scanned/Converted PDFs of images, presentations, or spreadsheets are unsupported."""
+    st.markdown(text)
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
         # To read file as bytes:
@@ -49,6 +44,7 @@ with col1:
         # Can be used wherever a "file-like" object is accepted:
         #dataframe = pd.read_csv(uploaded_file)
         #st.write(dataframe)
+
 with col2:
     st.header("Result Output")
     st.divider()
