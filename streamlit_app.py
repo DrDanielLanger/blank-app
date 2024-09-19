@@ -1,6 +1,9 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import time
+from io import StringIO
+
 
 #st.title("🎈 My new app")
 
@@ -8,7 +11,10 @@ LOGO_TEAM = "Challenge-picture2.png"
 #st.logo(LOGO_TEAM)
 st.logo(LOGO_TEAM, icon_image=LOGO_TEAM)
 
-
+_COMPARE = """
+The result of the technical comparison of the uploaded file with current 
+ThermoFisher Scientific IP documents shows no inflictions so far.
+"""
 
 # begin: main page setup
 st.set_page_config(layout="wide")
@@ -46,7 +52,12 @@ with col2:
     st.header("Result Output")
     st.divider()
 
-
+    def stream_data():
+       for word in _COMPARE.split(" "):
+           yield word + " "
+           time.sleep(0.1)
+    if st.button("Compare", type="primary"):
+        st.write_stream(stream_data)
 
 
 
