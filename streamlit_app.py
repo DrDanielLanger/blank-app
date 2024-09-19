@@ -2,6 +2,12 @@ import streamlit as st
 
 #st.title("🎈 My new app")
 
+LOGO_TEAM = "images/Challenge-picture2.png"
+#st.logo(LOGO_TEAM)
+st.logo(LOGO_TEAM, icon_image=LOGO_TEAM)
+
+
+
 # begin: main page setup
 st.set_page_config(layout="wide")
 st.title("Gene.AI IP Checker")
