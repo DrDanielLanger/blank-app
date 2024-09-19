@@ -7,9 +7,9 @@ from io import StringIO
 
 #st.title("🎈 My new app")
 
-LOGO_TEAM = "Challenge-picture2.png"
+#LOGO_TEAM = "Challenge-picture2.png"
 #st.logo(LOGO_TEAM)
-st.logo(LOGO_TEAM, icon_image=LOGO_TEAM)
+#st.logo(LOGO_TEAM, icon_image=LOGO_TEAM)
 
 _COMPARE = """
 The result of the technical comparison of the uploaded file with current 
@@ -26,6 +26,7 @@ col1, col2 = st.columns([1, 2])
 # begin: left sidebar
 with open("sidebar.md") as sidebar_file:
     sidebar_content = sidebar_file.read()
+st.sidebar.image("Challenge-picture2.png", width=250)
 st.sidebar.markdown(sidebar_content)
 with col1:
     st.header("IP to Compare")
