@@ -1,9 +1,13 @@
+#import of libraries to set up environment and functions
 import streamlit as st
 import numpy as np
-import pandas as pd
 import time
-from io import StringIO
 
+#next 2 lines are only required when reading the uploaded file and writing it into csv file
+#import pandas as pd
+#from io import StringIO
+
+#The following needs to be replaced by the output of the query from AskOurDocs.
 _COMPARE = """
 The result of the technical comparison of the uploaded file with current 
 ThermoFisher Scientific IP documents shows no inflictions so far.
@@ -27,6 +31,8 @@ with col1:
     st.divider()
     st.caption("NOTE: Scanned/Converted PDFs of images, presentations, or spreadsheets are unsupported.")
     
+    
+    #This portion is intended to load up the file to be compared and write this into a csv-file for comparison with the  
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
         # To read file as bytes:
